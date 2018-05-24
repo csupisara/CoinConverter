@@ -28,7 +28,7 @@ class ConvertActivity : AppCompatActivity() {
         val spinnerCountries = findViewById<Spinner>(R.id.spinner_countries)
         val spinnerCountries2 = findViewById<Spinner>(R.id.spinner_countries2)
 
-        mAdapter = CountryAdapter(this, mCountryList)
+        mAdapter = CountryAdapter(this, this!!.mCountryList!!)
         spinnerCountries.adapter = mAdapter
         spinnerCountries2.adapter = mAdapter
 
