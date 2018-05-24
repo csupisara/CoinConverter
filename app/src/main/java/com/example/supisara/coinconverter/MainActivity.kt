@@ -29,11 +29,6 @@ class MainActivity : AppCompatActivity() {
         startActivityForResult(intent, INPUT_REQUEST_CODE)
     }
 
-//    fun favoritePageButtonClicked(view: View) {
-//        val intent = Intent(this, FavoriteActivity::class.java)
-//        startActivityForResult(intent, INPUT_REQUEST_CODE2)
-//    }
-
     fun convertNewPageButtonClicked(view: View) {
         val intent = Intent(this, ConvertNewActivity::class.java)
         startActivityForResult(intent, INPUT_REQUEST_CODE3)

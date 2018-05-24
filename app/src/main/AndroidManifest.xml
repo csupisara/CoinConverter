@@ -24,13 +24,6 @@
                 android:value=".MainActivity" />
         </activity>
 
-        <activity android:name=".FavoriteActivity"
-            android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
-
         <activity android:name=".ConvertNewActivity"
             android:parentActivityName=".MainActivity">
             <meta-data
