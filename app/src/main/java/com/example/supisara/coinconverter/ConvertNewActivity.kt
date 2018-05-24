@@ -29,22 +29,19 @@ class ConvertNewActivity : AppCompatActivity() {
         rateEditText.inputType = InputType.TYPE_CLASS_NUMBER
         val rateText = rateEditText.text.toString()
 
-//        var input = 0.0
-//        var rate = 0.0
-        var input = Integer.parseInt(inputEditText.text.toString()).toDouble()
-        var rate = Integer.parseInt(inputEditText.text.toString()).toDouble()
-
-//        if (inputText.matches("[0-9]+(\\.[0-9]+)?".toRegex()) && rateText.matches("[0-9]+(\\.[0-9]+)?".toRegex())) {
-//            input = Integer.parseInt(inputEditText.text.toString()).toDouble()
-//            rate = Integer.parseInt(inputEditText.text.toString()).toDouble()
-//        }
-
-        //print the converted result
         val outputTextView = findViewById<View>(R.id.outputTextView) as TextView
         outputTextView.inputType = InputType.TYPE_CLASS_NUMBER
 
-        outputTextView.text = convert(input, rate).toString()
+        if(inputText != null && rateText != null && inputText != "-" && rateText != "-" && inputText != "" && rateText != ""){
+            var input = 0.0
+            var rate = 0.0
+            input = Integer.parseInt(inputEditText.text.toString()).toDouble()
+            rate = Integer.parseInt(inputEditText.text.toString()).toDouble()
+            outputTextView.text = convert(input, rate).toString()
+        } else{
+            outputTextView.text = "Please enter a number"
 
+        }
     }
 
     fun convert(number: Double, convertUnit: Double): Double {

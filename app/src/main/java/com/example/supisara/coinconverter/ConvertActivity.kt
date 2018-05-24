@@ -81,71 +81,71 @@ class ConvertActivity : AppCompatActivity() {
         val inputEditText = findViewById<View>(R.id.inputEditText) as EditText
         inputEditText.inputType = InputType.TYPE_CLASS_NUMBER
         val inputText = inputEditText.text.toString()
-        var input = Integer.parseInt(inputEditText.text.toString()).toDouble()
 
-//        if (inputText.matches("[0-9]+(\\.[0-9]+)?".toRegex())) {
-//            input = Integer.parseInt(inputEditText.text.toString()).toDouble()
-//        }
-
-        var usd = 0.0
-        var want = 0.0
-
-        if (spinnerFrom_data == "USD") {
-            usd = input
-        } else if (spinnerFrom_data == "INR") {
-            usd = convert(input, 0.0146)
-
-        } else if (spinnerFrom_data == "THB") {
-            usd = convert(input, 0.0311)
-            //change thai to usd
-        } else if (spinnerFrom_data == "JPY") {
-            usd = convert(input, 0.0091)
-
-        } else if (spinnerFrom_data == "HKD") {
-            usd = convert(input, 0.1274)
-
-        } else if (spinnerFrom_data == "CHF") {
-            usd = convert(input, 1.0036)
-
-        } else if (spinnerFrom_data == "GBP") {
-            usd = convert(input, 1.3324)
-
-        } else if (spinnerFrom_data == "EUR") {
-            usd = convert(input, 1.1685)
-
-        }
-
-        if (spinnerTo_data == "USD") {
-            want = usd
-        } else if (spinnerTo_data == "INR") {
-            want = convert(usd, 68.3850)
-
-        } else if (spinnerTo_data == "THB") {
-            want = convert(usd, 32.14)
-            //change usd to thai
-        } else if (spinnerTo_data == "JPY") {
-            want = convert(usd, 110.2455)
-
-        } else if (spinnerTo_data == "HKD") {
-            want = convert(usd, 7.8499)
-
-        } else if (spinnerTo_data == "CHF") {
-            want = convert(usd, 0.9964)
-
-        } else if (spinnerTo_data == "GBP") {
-            want = convert(usd, 0.7505)
-
-        } else if (spinnerTo_data == "EUR") {
-            want = convert(usd, 0.8558)
-        }
-
-        if (spinnerFrom_data == spinnerTo_data) want = input
-
-        //print the converted result
         val outputTextView = findViewById<View>(R.id.outputTextView) as TextView
         outputTextView.inputType = InputType.TYPE_CLASS_NUMBER
 
-        outputTextView.text = want.toString()
+        if(inputText != null && inputText != "-" && inputText != ""){
+            var input = Integer.parseInt(inputEditText.text.toString()).toDouble()
+
+            var usd = 0.0
+            var want = 0.0
+
+            if (spinnerFrom_data == "USD") {
+                usd = input
+            } else if (spinnerFrom_data == "INR") {
+                usd = convert(input, 0.0146)
+
+            } else if (spinnerFrom_data == "THB") {
+                usd = convert(input, 0.0311)
+                //change thai to usd
+            } else if (spinnerFrom_data == "JPY") {
+                usd = convert(input, 0.0091)
+
+            } else if (spinnerFrom_data == "HKD") {
+                usd = convert(input, 0.1274)
+
+            } else if (spinnerFrom_data == "CHF") {
+                usd = convert(input, 1.0036)
+
+            } else if (spinnerFrom_data == "GBP") {
+                usd = convert(input, 1.3324)
+
+            } else if (spinnerFrom_data == "EUR") {
+                usd = convert(input, 1.1685)
+
+            }
+
+            if (spinnerTo_data == "USD") {
+                want = usd
+            } else if (spinnerTo_data == "INR") {
+                want = convert(usd, 68.3850)
+
+            } else if (spinnerTo_data == "THB") {
+                want = convert(usd, 32.14)
+                //change usd to thai
+            } else if (spinnerTo_data == "JPY") {
+                want = convert(usd, 110.2455)
+
+            } else if (spinnerTo_data == "HKD") {
+                want = convert(usd, 7.8499)
+
+            } else if (spinnerTo_data == "CHF") {
+                want = convert(usd, 0.9964)
+
+            } else if (spinnerTo_data == "GBP") {
+                want = convert(usd, 0.7505)
+
+            } else if (spinnerTo_data == "EUR") {
+                want = convert(usd, 0.8558)
+            }
+
+            if (spinnerFrom_data == spinnerTo_data) want = input
+
+            outputTextView.text = want.toString()
+        } else {
+            outputTextView.text = "Please enter a number"
+        }
 
     }
 

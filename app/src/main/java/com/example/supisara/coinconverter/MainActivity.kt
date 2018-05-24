@@ -31,14 +31,12 @@ class MainActivity : AppCompatActivity() {
 
     fun convertNewPageButtonClicked(view: View) {
         val intent = Intent(this, ConvertNewActivity::class.java)
-        startActivityForResult(intent, INPUT_REQUEST_CODE3)
+        startActivityForResult(intent, INPUT_REQUEST_CODE2)
     }
 
     companion object {
-
         val INPUT_REQUEST_CODE = 100
         val INPUT_REQUEST_CODE2 = 200
-        val INPUT_REQUEST_CODE3 = 300
     }
 
 }
