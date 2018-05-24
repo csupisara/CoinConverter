@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.supisara.coinconverter.ConvertNewActivity"
+    >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rateTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter your currency rate:"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"/>
+
+
+            <EditText
+                android:id="@+id/rateEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                />
+
+
+            <TextView
+                android:id="@+id/amountTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter the amount:"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"/>
+
+
+            <EditText
+                android:id="@+id/inputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                />
+
+            <Button
+                android:id="@+id/convertButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Convert!"
+                android:onClick="convertButtonClicked"
+                android:background="@android:color/holo_green_light"
+                android:textColor="@android:color/white"/>
+
+
+            <TextView
+                android:id="@+id/resultTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Result:"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/outputTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textColor="@android:color/holo_blue_dark"/>
+
+            <Button
+                android:id="@+id/clearButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Clear"
+                android:onClick="clearButtonClicked"
+                android:background="@android:color/holo_red_dark"
+                android:textColor="@android:color/white"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
