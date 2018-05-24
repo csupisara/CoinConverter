@@ -40,14 +40,14 @@
         android:layout_width="match_parent"
         android:layout_height="10dp" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@android:color/holo_orange_light"
-        android:onClick="favoritePageButtonClicked"
-        android:text="- Add to my Favorite -"
-        android:textColor="@android:color/white"
-        android:textSize="30sp" />
+    <!--<Button-->
+        <!--android:id="@+id/button2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="150dp"-->
+        <!--android:background="@android:color/holo_orange_light"-->
+        <!--android:onClick="favoritePageButtonClicked"-->
+        <!--android:text="- Add to my Favorite -"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:textSize="30sp" />-->
 
 </LinearLayout>

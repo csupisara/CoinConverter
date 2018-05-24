@@ -19,7 +19,7 @@ public class FavoriteActivity extends AppCompatActivity {
     private ArrayList<CountryItem> mCountryList;
     private CountryAdapter mAdapter;
 
-    public ArrayList<String> favoriteList;
+//    public ArrayList<String> favoriteList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,8 +51,8 @@ public class FavoriteActivity extends AppCompatActivity {
 //        ListView favoriteListView = (ListView) findViewById(R.id.favoriteListView);
 //        favoriteListView.setAdapter(adapter);
 
-        ListView favoriteListView = (ListView) findViewById(R.id.favoriteListView);
-        favoriteListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, favoriteList));
+//        ListView favoriteListView = (ListView) findViewById(R.id.favoriteListView);
+//        favoriteListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, favoriteList));
 
     }
 
