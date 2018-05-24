@@ -6,35 +6,36 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.supisara.coinconverter.MainActivity"
+    android:background="@drawable/bg"
     >
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="10dp" />
+        android:layout_height="220dp" />
 
     <Button
     android:id="@+id/button"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
+    android:layout_height="130dp"
     android:text="- Convert normal rate -"
     android:onClick="convertPageButtonClicked"
-    android:background="@android:color/holo_green_dark"
+    android:background="@android:color/holo_orange_light"
     android:textColor="@android:color/white"
-    android:textSize="30sp"/>
+    android:textSize="27sp"/>
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="10dp" />
+        android:layout_height="20dp" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:text="- Convert my rate -"
+        android:layout_height="130dp"
+        android:background="@android:color/holo_red_light"
         android:onClick="convertNewPageButtonClicked"
-        android:background="@android:color/holo_blue_dark"
+        android:text="- Convert my rate -"
         android:textColor="@android:color/white"
-        android:textSize="30sp"/>
+        android:textSize="27sp" />
 
     <Space
         android:layout_width="match_parent"

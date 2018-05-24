@@ -19,7 +19,7 @@
         android:layout_toEndOf="@+id/image_view_flag"
         android:gravity="center"
         android:text="USD"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/holo_orange_dark"
         android:textSize="20sp" />
 
 

@@ -39,13 +39,6 @@ class FavoriteActivity : AppCompatActivity() {
             }
         }
 
-        //        ListAdapter adapter = new ArrayAdapter<String>(this ,android.R.layout.simple_list_item_1, favoriteList);
-        //        ListView favoriteListView = (ListView) findViewById(R.id.favoriteListView);
-        //        favoriteListView.setAdapter(adapter);
-
-        //        ListView favoriteListView = (ListView) findViewById(R.id.favoriteListView);
-        //        favoriteListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, favoriteList));
-
         val items = ArrayList<String>()
         var adapter: ArrayAdapter<String>? = null
 
