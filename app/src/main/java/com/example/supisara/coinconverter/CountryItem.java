@@ -16,4 +16,9 @@ public class CountryItem {
     public int getFlagImage() {
         return mFlagImage;
     }
+
+    @Override
+    public String toString() {
+        return mCountryName;
+    }
 }

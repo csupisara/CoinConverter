@@ -4,14 +4,105 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.codinginflow.customspinnerexample.MainActivity">
-
-    <Spinner
-        android:id="@+id/spinner_countries"
+    tools:context="com.example.supisara.coinconverter.MainActivity">
+    
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp" />
+        android:id="@+id/relativeLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/fromTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="From"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"/>
+
+            <Spinner
+                android:id="@+id/spinner_countries"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="18dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/toTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="To"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"/>
+
+            <Spinner
+                android:id="@+id/spinner_countries2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="18dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/amountTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter the amount:"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"/>
+
+
+            <EditText
+                android:id="@+id/inputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                />
+
+            <Button
+                android:id="@+id/convertButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Convert!"
+                android:onClick="convertButtonClicked"
+                android:background="@android:color/holo_green_light"
+                android:textColor="@android:color/white"/>
+
+
+            <TextView
+                android:id="@+id/resultTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Result:"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/outputTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textColor="@android:color/holo_blue_dark"/>
+
+            <Button
+                android:id="@+id/clearButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Clear"
+                android:onClick="clearButtonClicked"
+                android:background="@android:color/holo_red_dark"
+                android:textColor="@android:color/white"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </RelativeLayout>
